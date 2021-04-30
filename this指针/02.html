@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this全局对象</title>
+</head>
+<body>
+
+</body>
+<script>
+///》》》》》  单独使用this表示全局变量   》》》》》》》》》》
+//定义全局的变量aaa   调用可以是aaa,window.aaa
+window.aaa=12;
+console.log(aaa);
+(function(){
+  console.log(aaa); //直接法
+  console.log(window.aaa); //window属性法
+  console.log(this.aaa);  //this方法
+})()
+</script>
+</html>

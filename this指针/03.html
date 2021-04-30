@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this 函数中测试  非严格模式和严格模式</title>
+</head>
+<body>
+
+</body>
+<script>
+// "use strict";  //严格模式  this  undefined
+
+function aaa(){
+  var bb=2;
+  console.log(this);  //非严格模式下   this是window 对象
+}
+aaa();
+</script>
+</html>
