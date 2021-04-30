@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this的切换，call,apply bind</title>
+</head>
+<body>
+<span>call\apply\bind的使用</span>
+<p id="demo"></p>
+</body>
+<script>
+var person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+var person2 = {
+  firstName:"John",
+  lastName: "Doe",
+};
+var x=person1.fullName().call(person2);  //通过call 将this指向person2内部，因此可以让person1的firstName 和 lastName使用
+//的时候调用的是person2中的firstName和lastName
+document.getElementById("demo").innerText=x;
+
+//////>>>>>>>>>>>>>  person1.fullName(...).call is not a function  >>>>>>>>>>>>>>>>>>>>>>
+</script>
+</html>
